@@ -1,0 +1,21 @@
+.header {
+  background-color: #24292e;
+  height: 55px;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.fa {
+  color: white;
+}
+
+.header a {
+  color: white;
+}
