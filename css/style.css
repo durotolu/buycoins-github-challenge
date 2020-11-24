@@ -54,10 +54,11 @@ a {
 .main-section {
   display: flex;
   flex-direction: row;
+  justify-content: space-evenly;
 }
 
 .user-info {
-  width: 26.5%;
+  width: 21%;
   border: 1px solid red;
 }
 
@@ -71,4 +72,27 @@ button {
   /* height: 100%; */
   /* position: relative; */
   bottom: 20px;
+}
+
+.repo-info {
+  border: 2px solid blue;
+  width: 67%;
+  /* margin: 0 8.5em; */
+}
+
+.repo-filter {
+  display: flex;
+  border-bottom: 1px solid #eaecef;
+  padding-bottom: 2em;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.repo-input {
+  width: 30em;
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
 }
