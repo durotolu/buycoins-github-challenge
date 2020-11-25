@@ -105,8 +105,14 @@ a {
   width: 100%;
 }
 
+.repo-details {
+  height: 8em;
+  border-top : 1px solid #eaecef;
+}
+
 footer {
   border-top: 1px solid #eaecef;
+  border-bottom: 1px solid #eaecef;
 }
 
 .footer-nav {
