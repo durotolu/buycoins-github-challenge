@@ -88,10 +88,9 @@ a {
 .repo-filter {
   display: flex;
   border-bottom: 1px solid #eaecef;
-  padding-bottom: 2em;
+  padding: 2em 0;
   justify-content: space-between;
-  align-items: center;
-  border: 1px solid blue;
+  border: 1px solid green;
 }
 
 .repo-input {
@@ -107,13 +106,17 @@ a {
 }
 
 footer {
+  border-top: 1px solid #eaecef;
+}
+
+.footer-nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
   font-size: 12px;
   color: 0399e8;
   max-width: 97%;
-  margin: 0 auto;
+  margin: 3.5em auto;
 }
 
 .icon-foot {
