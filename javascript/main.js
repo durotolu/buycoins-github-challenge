@@ -47,6 +47,24 @@ const handleData = (data) => {
   avatar.forEach((img) => {
     img.src = data.avatarUrl;
   });
+  const name = document.querySelector(".name")
+  name.innerHTML = data.name
+  const login = document.querySelector(".login")
+  login.innerHTML = data.login
+  const bio = document.querySelector(".bio")
+  bio.innerHTML = data.bio
+  const followers = document.querySelector(".followers")
+  followers.innerHTML = `${data.followers.totalCount} followers`
+  const following = document.querySelector(".following")
+  following.innerHTML = `${data.following.totalCount} following`
+  const starred = document.querySelector(".starred")
+  starred.innerHTML = data.starredRepositories.totalCount
+  const company = document.querySelector(".company")
+  company.innerHTML = data.company
+  const location = document.querySelector(".location")
+  location.innerHTML = data.location
+  const websiteUrl = document.querySelector(".website-url")
+  websiteUrl.innerHTML = data.websiteUrl
 };
 
 const GETData = () => {
@@ -67,4 +85,4 @@ const GETData = () => {
   .catch(err => console.log(err))
 }
 
-GETData()
+// GETData()
