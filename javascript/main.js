@@ -42,6 +42,13 @@ const queryParameters = `{
   }
 }`
 
+const handleData = (data) => {
+  const avatar = document.querySelectorAll("img");
+  avatar.forEach((img) => {
+    img.src = data.avatarUrl;
+  });
+};
+
 const GETData = () => {
   fetch("https://api.github.com/graphql", {
     method: "POST",
@@ -52,8 +59,12 @@ const GETData = () => {
     },
     body: JSON.stringify({ query: queryParameters})
   })
-  .then(res => console.log(res.json()))
+  .then(res => res.json())
+  .then(res => {
+    handleData(res.data.user)
+    console.log(res.data.user)
+  })
   .catch(err => console.log(err))
 }
 
-// GETData()
+GETData()
