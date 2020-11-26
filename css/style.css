@@ -143,7 +143,6 @@ a {
 .repo-lang-licence-time {
   font-size: 12px;
   margin-top: 8px!important;
-  border: 1px solid yellow;
 }
 
 .repo-star-button {
@@ -154,6 +153,15 @@ a {
   font-weight: 500;
   border: 1px solid #bfc4c4;
   border-radius: 6px;
+  background-color: #fafbfc;
+}
+
+.repo-star-button:hover {
+  background-color: #e1e4e8;
+}
+
+button {
+  cursor: pointer;
 }
 
 footer {
