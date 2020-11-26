@@ -13,21 +13,23 @@
 <body>
   <header>
     <nav class="header">
-      <div>
-        <i style="font-size: 32px;" class="navhead fa fa-github"></i>
-        <label class="navhead">
-          <input type="text" placeholder="Search or jump to...            /" />
+      <div class="navhead-left">
+        <i style="font-size: 37px;" class="navhead fa fa-github"></i>
+        <label class="navhead-input">
+          <input class="navhead-input" type="text" placeholder="Search or jump to..." />
         </label>
-        <a class="navhead" href="#">Pull requests</a>
-        <a class="navhead" href="#">Issues</a>
-        <a class="navhead" href="#">Marketplace</a>
-        <a class="navhead" href="#">Explore</a>
+        <div class="navhead-left-nav">
+          <a class="navhead navhead-pull" href="#">Pull requests</a>
+          <a class="navhead" href="#">Issues</a>
+          <a class="navhead" href="#">Marketplace</a>
+          <a class="navhead" href="#">Explore</a>
+        </div>
       </div>
       <div>
         <i class="navhead fa fa-book-open"></i>
         <i class="navhead fa fa-bell"></i>
         <i class="navhead fa fa-plus"></i>
-        <img class="img-icon" alt="picture icon"/>
+        <img class="img-icon" alt="picture icon" />
       </div>
     </nav>
   </header>
@@ -58,10 +60,10 @@
       </div>
       <div class="repo-info">
         <div class="repo-filter">
-          <label for="">
-            <input class="actions" class="repo-input" placeholder="Find a repository..." type="text" />
+          <label class="repo-input-label" for="">
+            <input class="actions" id="repo-input" placeholder="Find a repository..." type="text" />
           </label>
-          <select class="actions" name="" id="">
+          <select class="select-color actions" name="" id="">
             <option value="">All</option>
             <option value="">Public</option>
             <option value="">Private</option>
@@ -70,7 +72,7 @@
             <option value="">Archived</option>
             <option value="">Mirrors</option>
           </select>
-          <select class="actions" name="" id="">
+          <select class="select-color actions" name="" id="">
             <option value="">All</option>
             <option value="">JavaScript</option>
             <option value="">Shell</option>
@@ -93,7 +95,7 @@
               </div>
             </div>
             <div class="repo-details-right">
-              <button class="repo-star-button">Star</button>
+              <button class="repo-star-button select-color">Star</button>
             </div>
           </div>
           <div class="repo-details"></div>

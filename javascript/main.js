@@ -115,4 +115,4 @@ const GETData = () => {
     .catch(err => console.log(err))
 }
 
-GETData()
+// GETData()

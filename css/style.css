@@ -25,7 +25,31 @@ a {
 }
 
 .navhead {
-  margin: 0 .4em;
+  margin: auto .4em;
+}
+
+.navhead-pull {
+  width: 32%;
+}
+
+.navhead-left {
+  display: flex;
+  justify-content: space-between;
+  min-width: 45%;
+  margin-left: .7em;
+}
+
+.navhead-left-nav {
+  width: 100%;
+  margin: auto;
+  border: 1px solid yellow;
+}
+
+.navhead-input {
+  min-height: 28px;
+  border-radius: 6px;
+  width: 80%;
+  background: none;
 }
 
 .repo {
@@ -64,7 +88,6 @@ a {
 }
 
 .actions {
-  /* width: 100%; */
   border-radius: 6px;
   padding: 5px 16px;
   font-size: 14px;
@@ -92,15 +115,15 @@ a {
   border-bottom: 1px solid #eaecef;
   padding: 1.2em 0;
   justify-content: space-between;
-  border: 1px solid green;
 }
 
-.repo-input {
-  width: 30em;
+.repo-input-label {
+  width: 34em;
 }
 
-#button-new-repo {
-  width: 48px;
+#repo-input {
+  width: 94%;
+  border: 1px solid #bfc4c4;
 }
 
 #button-edit-profile {
@@ -151,12 +174,16 @@ a {
   font-size: 12px;
   line-height: 20px;
   font-weight: 500;
-  border: 1px solid #bfc4c4;
   border-radius: 6px;
-  background-color: #fafbfc;
 }
 
-.repo-star-button:hover {
+.select-color {
+  background-color: #fafbfc;
+  border: 1px solid #bfc4c4;
+  cursor: pointer;
+}
+
+.select-color:hover {
   background-color: #e1e4e8;
 }
 
