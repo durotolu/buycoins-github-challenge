@@ -84,7 +84,7 @@ const handleData = (data) => {
     repoDetailsLeft.appendChild(repoName)
     repoDetailsLeft.appendChild(repoDescription)
     repoStarButton = document.createElement('button')
-    repoStarButton.className = "repo-star-button"
+    repoStarButton.className = "repo-star-button select-color"
     repoStarButton.innerHTML = 'Star'
     repoDetailsRight = document.createElement('div')
     repoDetailsRight.className = "repo-details-right"
@@ -115,4 +115,4 @@ const GETData = () => {
     .catch(err => console.log(err))
 }
 
-// GETData()
+GETData()
