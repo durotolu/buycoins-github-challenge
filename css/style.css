@@ -1,15 +1,31 @@
+body {
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #24292e;
+}
+
+.div-header {
+  position: relative!important;
+}
+
 .header {
   background-color: #24292e;
-  height: 55px;
+  color: hsl(0deg 0% 100% / 70%);
+  /* height: 55px; */
   /* width: 100vw; */
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
+  z-index: 32;
+  padding: 16px;
+  /* font-size: 14px; */
+  /* line-height: 1.5; */
 }
 
 a {
   text-decoration: none;
-  color: black;
+  color: #24292e;
 }
 
 .fa {
@@ -28,40 +44,110 @@ a {
   margin: auto .4em;
 }
 
+.navhead-github {
+  margin-right: 16px;
+  align-self: stretch;
+}
+
+.navhead-action-github {
+  font-weight: 600;
+  color: #fff;
+  white-space: nowrap;
+}
+
 .navhead-pull {
   width: 32%;
 }
 
 .navhead-left {
-  display: flex;
-  justify-content: space-between;
-  min-width: 45%;
-  margin-left: .7em;
+  /* display: flex; */
+  /* justify-content: space-between; */
+  /* min-width: 45%; */
+  /* margin-left: .7em; */
+  flex: auto;
+  margin-right: 16px;
+  align-self: stretch;
+  align-items: center;
+  flex-wrap: nowrap;
+  display: flex!important;
+  margin-right: 16px!important;
+  margin-top: 0!important;
+  width: 100%!important;
+  order: inherit!important;
+  flex-direction: row!important;
+}
+
+.navhead-input-div {
+  margin-right: 16px!important;
+  margin-bottom: 0!important;
+  position: relative!important;
+  align-self: auto!important;
+  flex: auto!important
 }
 
 .navhead-left-nav {
   width: 100%;
   margin: auto;
-  border: 1px solid yellow;
+}
+
+.navhead-input-label {
+  min-height: 28px;
+  /* display: table; */
+  width: 100%;
+  max-width: 100%;
+  /* padding: 0; */
+  font-size: inherit;
+  font-weight: 400;
+  color: #fff;
+  vertical-align: middle;
+  background-color: #24292e;
+  border: 1px solid #444d56;
+  box-shadow: none;
+
+  display: flex!important;
+  padding: 0!important;
+  position: relative!important;
+  align-items: center!important;
+  justify-content: space-between!important;
 }
 
 .navhead-input {
-  min-height: 28px;
-  border-radius: 6px;
-  width: 80%;
+  /* width: 80%; */
+
+  /* min-height: 28px; */
+  display: table-cell;
+  width: 100%;
+  padding-top: 0;
+  padding-bottom: 0;
+  font-size: inherit;
+  color: inherit;
   background: none;
+  border: 0;
+  box-shadow: none;
+  line-height: 20px;
+  padding: 5px 12px;
+  vertical-align: middle;
+  border-radius: 6px;
 }
 
-.repo {
-  margin: 2.5em 0 0 23.5em;
-  display: flex;
-  justify-content: space-between;
-  max-width: 35.5%;
-  height: 2em;
+.slash {
+  margin-right: 8px!important;
+  border-style: none;
+  font-size: inherit;
+  font-weight: 400;
+  color: #bb4545;
 }
 
 .repo-div {
   border-bottom: 1px solid #eaecef;
+}
+
+.repo {
+  margin: 2.1em auto .4em auto;
+  display: flex;
+  justify-content: space-between;
+  max-width: 35.5%;
+  height: 2em;
 }
 
 .img-icon {
@@ -75,7 +161,6 @@ a {
   font-size: 26px;
   line-height: 1.25;
   font-weight: 600;
-  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
   color: #3f4347;
 }
 
@@ -84,21 +169,33 @@ a {
   font-style: normal;
   font-weight: 300;
   line-height: 24px;
-  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
   color: #94999f;
   margin-top: 0;
   margin-bottom: 0;
 }
 
-.bio {
-  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+/* .bio {
   line-height: 1.5;
+} */
+
+#selected {
+  font-weight: 600;
+  padding-bottom: .365em;
+  border-bottom: 2px solid #f9826c;
+  height: 100%;
 }
 
-.selected {
-  font-weight: bold;
-  border-bottom: 2px solid red;
-  height: 100%;
+.repo-total {
+  margin-left: 4px;
+  display: inline-block;
+  min-width: 20px;
+  padding: 0 6px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  background-color: rgb(209 213 218 / 50%);
+  border: 1px solid transparent;
+  border-radius: 2em;
 }
 
 .main-section {
@@ -117,7 +214,6 @@ a {
 .actions {
   border-radius: 6px;
   padding: 5px 16px;
-  font-size: 14px;
   font-weight: 500;
   line-height: 20px;
   vertical-align: middle;
@@ -136,8 +232,7 @@ a {
 
 .repo-filter {
   display: flex;
-  border-bottom: 1px solid #eaecef;
-  padding: 1.2em 0;
+  padding: 1em 0;
   justify-content: space-between;
 }
 
@@ -148,6 +243,15 @@ a {
 #repo-input {
   width: 94%;
   border: 1px solid #bfc4c4;
+}
+
+#button-new-repo {
+  background-color: #2ea44f;
+  color: white;
+}
+
+#button-new-repo:hover {
+  background-color: #158635;
 }
 
 #button-edit-profile {
@@ -167,18 +271,14 @@ a {
   font-weight: 600;
   margin-top: 0;
   margin-bottom: 4px!important;
-  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
 }
 
 .repo-name-link {
   color: #0366de;
-  line-height: 1.5;
   font-size: 20px;
 }
 
 .repo-description {
-  font-size: 14px;
-  line-height: 1.5;
   display: inline-block!important;
   margin-bottom: 8px!important;
   width: 75%;

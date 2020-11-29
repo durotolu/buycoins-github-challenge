@@ -11,33 +11,43 @@
 </head>
 
 <body>
-  <header>
-    <nav class="header">
-      <div class="navhead-left">
-        <i style="font-size: 37px;" class="navhead fa fa-github"></i>
-        <label class="navhead-input">
-          <input class="navhead-input" type="text" placeholder="Search or jump to..." />
-        </label>
-        <div class="navhead-left-nav">
-          <a class="navhead navhead-pull" href="#">Pull requests</a>
-          <a class="navhead" href="#">Issues</a>
-          <a class="navhead" href="#">Marketplace</a>
-          <a class="navhead" href="#">Explore</a>
+  <div class="div-header">
+    <header>
+      <nav class="header">
+        <div class="navhead-github">
+          <a class="navhead-action-github"><i style="font-size: 34px;" class="navhead fa fa-github"></i></a>
         </div>
-      </div>
-      <div>
-        <i class="navhead fa fa-book-open"></i>
-        <i class="navhead fa fa-bell"></i>
-        <i class="navhead fa fa-plus"></i>
-        <img class="img-icon" alt="picture icon" />
-      </div>
-    </nav>
-  </header>
+        <div class="navhead-left">
+          <!-- <i style="font-size: 37px;" class="navhead fa fa-github"></i> -->
+          <div class="navhead-input-div">
+            <form>
+              <label class="navhead-input-label">
+                <input class="navhead-input" type="text" placeholder="Search or jump to..." />
+                <img src="https://github.githubassets.com/images/search-key-slash.svg" alt="slash" class="slash">
+              </label>
+            </form>
+          </div>
+          <div class="navhead-left-nav">
+            <a class="navhead navhead-pull" href="#">Pull requests</a>
+            <a class="navhead" href="#">Issues</a>
+            <a class="navhead" href="#">Marketplace</a>
+            <a class="navhead" href="#">Explore</a>
+          </div>
+        </div>
+        <div>
+          <i class="navhead fa fa-book-open"></i>
+          <i class="navhead fa fa-bell"></i>
+          <i class="navhead fa fa-plus"></i>
+          <img class="img-icon" alt="picture icon" />
+        </div>
+      </nav>
+    </header>
+  </div>
   <main>
     <div class="repo-div">
       <nav class="repo">
         <a href="#"><i class="fas fa-book-open"></i>Overview</a>
-        <a class="selected" href="#">Repositories</a>
+        <a id="selected" href="#">Repositories</a>
         <a href="#">Projects</a>
         <a href="#">Packages</a>
       </nav>
