@@ -43,7 +43,7 @@ const queryParameters = `{
 }`
 
 const handleData = (data) => {
-  const avatar = document.querySelectorAll("img");
+  const avatar = document.querySelectorAll(".img-icon");
   avatar.forEach((img) => {
     img.src = data.avatarUrl;
   });
@@ -65,9 +65,13 @@ const handleData = (data) => {
   location.innerHTML = data.location
   const websiteUrl = document.querySelector(".website-url")
   websiteUrl.innerHTML = data.websiteUrl
+  const repoHeading = document.querySelector("#selected")
+  const repoTotal = document.createElement('span');
+  repoTotal.className = "repo-total"
+  repoTotal.innerHTML = data.repositories.totalCount
+  repoHeading.appendChild(repoTotal)
   const repoList = document.querySelector(".repo-list")
   data.repositories.nodes.forEach((repository) => {
-    console.log(repository)
     const repoNameLink = document.createElement('a');
     repoNameLink.className = "repo-name-link"
     repoNameLink.innerHTML = repository.name
@@ -103,16 +107,16 @@ const GETData = () => {
     headers: {
       "Content-Type": "application/json",
       Accept: "application/json",
-      Authorization: `bearer 374708be08e1d0d36b4b16b345735ec9593b9861`,
+      Authorization: `bearer `,
     },
     body: JSON.stringify({ query: queryParameters })
   })
     .then(res => res.json())
     .then(res => {
-      handleData(res.data.user)
       console.log(res.data.user)
+      handleData(res.data.user)
     })
-    .catch(err => console.log(err))
+    .catch(err => console.log(err.json()))
 }
 
 GETData()
