@@ -13,61 +13,75 @@
 <body>
   <div class="div-header">
     <header>
-      <nav class="header">
-        <div class="navhead-github">
-          <a class="navhead-action-github"><i style="font-size: 34px;" class="navhead fa fa-github"></i></a>
+      <!-- <nav class="header-nav"> -->
+      <div class="navhead-github">
+        <a class="navhead-action-github"><i style="font-size: 34px;" class="navhead fa fa-github"></i></a>
+      </div>
+      <nav class="navhead-left">
+        <!-- <i style="font-size: 37px;" class="navhead fa fa-github"></i> -->
+        <div class="navhead-input-div">
+          <form>
+            <label class="navhead-input-label">
+              <input class="navhead-input" type="text" placeholder="Search or jump to..." />
+              <img src="https://github.githubassets.com/images/search-key-slash.svg" alt="slash" class="slash">
+            </label>
+          </form>
         </div>
-        <div class="navhead-left">
-          <!-- <i style="font-size: 37px;" class="navhead fa fa-github"></i> -->
-          <div class="navhead-input-div">
-            <form>
-              <label class="navhead-input-label">
-                <input class="navhead-input" type="text" placeholder="Search or jump to..." />
-                <img src="https://github.githubassets.com/images/search-key-slash.svg" alt="slash" class="slash">
-              </label>
-            </form>
-          </div>
-          <div class="navhead-left-nav">
-            <a class="navhead-a navhead-pull" href="#">Pull requests</a>
-            <a class="navhead-a" href="#">Issues</a>
-            <a class="navhead-a" href="#">Marketplace</a>
-            <a class="navhead-a" href="#">Explore</a>
-          </div>
-        </div>
-        <div>
-          <i class="navhead fa fa-book-open"></i>
-          <i class="navhead fa fa-bell"></i>
-          <i class="navhead fa fa-plus"></i>
-          <img class="img-icon" alt="picture icon" />
+        <div class="navhead-left-nav">
+          <a class="navhead-a navhead-pull" href="#">Pull requests</a>
+          <a class="navhead-a" href="#">Issues</a>
+          <a class="navhead-a" href="#">Marketplace</a>
+          <a class="navhead-a" href="#">Explore</a>
         </div>
       </nav>
+      <!-- </nav> -->
+      <!-- <div class="navhead-icon"><i class="navhead fa fa-book-open"></i></div> -->
+      <div class="navhead-icon"><i class="navhead fa fa-bell"></i></div>
+      <div class="navhead-icon"><i class="navhead fa fa-plus"></i></div>
+      <div class="navhead-icon"><img class="img-icon" alt="picture icon" /></div>
     </header>
   </div>
   <main>
     <div class="repo-div">
-      <nav class="repo">
-        <a href="#"><i class="fas fa-book-open"></i>Overview</a>
-        <a id="selected" href="#">Repositories</a>
-        <a href="#">Projects</a>
-        <a href="#">Packages</a>
-      </nav>
+      <div class="repo-div-left">
+        <div class="repo-div-left-in">
+          <!-- <img class="img-icon img-profile" alt="profile picture"> -->
+        </div>
+      </div>
+      <div class="repo-div-right">
+        <nav class="repo-div-right-in">
+          <a class="repo-div-right-action" href="#"><i class="fas fa-book-open"></i>Overview</a>
+          <a class="repo-div-right-action" id="selected" href="#">Repositories</a>
+          <a class="repo-div-right-action" href="#">Projects</a>
+          <a class="repo-div-right-action" href="#">Packages</a>
+        </nav>
+      </div>
     </div>
     <div class="main-section">
       <div class="user-info">
-        <img class="img-icon img-profile" alt="profile picture">
-        <div>
-          <h2 class="name"></h2>
+        <div class="img-profile-div">
+          <img id="img-profile" class="img-icon" alt="profile picture">
+          <h1 class="name"></h1>
           <h4 class="login"></h4>
+        </div>
+        <div>
+          <!-- <h2 class="name"></h2>
+          <h4 class="login"></h4> -->
           <p class="bio"></p>
           <button id="button-edit-profile" class="select-color actions">Edit profile</button>
           <p>
-            <span class="followers"></span>
-            <span class="following"></span>
-            <span class="starred"></span>
+            <a href="https://github.com/durotolu?tab=followers"><span class="followers"></span> followers . </a>
+            <a href="https://github.com/durotolu?tab=following"><span class="following"></span> following . </a>
+            <a href="https://github.com/durotolu?tab=stars"><span class="starred"></span></a>
           </p>
           <div class="company"></div>
           <div class="location"></div>
           <div class="website-url"></div>
+          <div class="highlights">
+            <h2>Highlights</h2>
+            <p>Arctic Code Vault Contributor</p>
+            <span class="pro">PRO</span>
+          </div>
         </div>
       </div>
       <div class="repo-info">

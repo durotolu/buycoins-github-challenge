@@ -44,6 +44,7 @@ const queryParameters = `{
 
 const handleData = (data) => {
   const avatar = document.querySelectorAll(".img-icon");
+  console.log(avatar)
   avatar.forEach((img) => {
     img.src = data.avatarUrl;
   });
@@ -54,9 +55,9 @@ const handleData = (data) => {
   const bio = document.querySelector(".bio")
   bio.innerHTML = data.bio
   const followers = document.querySelector(".followers")
-  followers.innerHTML = `${data.followers.totalCount} followers`
+  followers.innerHTML = data.followers.totalCount
   const following = document.querySelector(".following")
-  following.innerHTML = `${data.following.totalCount} following`
+  following.innerHTML = data.following.totalCount
   const starred = document.querySelector(".starred")
   starred.innerHTML = data.starredRepositories.totalCount
   const company = document.querySelector(".company")
@@ -119,4 +120,4 @@ const GETData = () => {
     .catch(err => console.log(err.json()))
 }
 
-// GETData()
+GETData()
