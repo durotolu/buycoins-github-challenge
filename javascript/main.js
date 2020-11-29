@@ -119,4 +119,4 @@ const GETData = () => {
     .catch(err => console.log(err.json()))
 }
 
-GETData()
+// GETData()

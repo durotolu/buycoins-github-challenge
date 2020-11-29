@@ -40,6 +40,18 @@ a {
   color: white;
 }
 
+.navhead-a {
+  margin: auto .4em;
+
+  font-weight: 600;
+  white-space: nowrap;
+  padding-top: 16px!important;
+  padding-bottom: 16px!important;
+  margin-bottom: -16px!important;
+  margin-top: -16px!important;
+  margin-right: 16px!important;
+}
+
 .navhead {
   margin: auto .4em;
 }
@@ -55,9 +67,9 @@ a {
   white-space: nowrap;
 }
 
-.navhead-pull {
+/* .navhead-pull {
   width: 32%;
-}
+} */
 
 .navhead-left {
   /* display: flex; */
@@ -86,8 +98,12 @@ a {
 }
 
 .navhead-left-nav {
-  width: 100%;
-  margin: auto;
+  /* width: 100%;
+  margin: auto; */
+
+  display: flex!important;
+  align-self: auto!important;
+  flex-direction: row!important;
 }
 
 .navhead-input-label {
@@ -109,6 +125,9 @@ a {
   position: relative!important;
   align-items: center!important;
   justify-content: space-between!important;
+  line-height: 20px;
+  border-radius: 6px;
+  outline: none;
 }
 
 .navhead-input {
