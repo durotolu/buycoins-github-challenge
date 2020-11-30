@@ -42,6 +42,8 @@ const queryParameters = `{
   }
 }`
 
+const monthArray = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+
 const handleData = (data) => {
   const avatar = document.querySelectorAll(".img-icon");
   console.log(avatar)
@@ -93,11 +95,11 @@ const handleData = (data) => {
 
     const repoLicence = document.createElement('span')
     repoLicence.className = "repo-licence"
-    repoLicence.innerHTML = repository.licenseInfo.name
+    repoLicence.innerHTML = repository.licenseInfo ? repository.licenseInfo.name : null
 
     const repoTime = document.createElement('span')
     repoTime.className = "repo-time"
-    repoTime.innerHTML = repository.updatedAt
+    repoTime.innerHTML = `Updated on ${new Date(repository.updatedAt).getDate()} ${monthArray[new Date(repository.updatedAt).getMonth()]}`
 
     repoLangLicenceTime.appendChild(repoColor)
     repoLangLicenceTime.appendChild(repoLang)
@@ -111,7 +113,14 @@ const handleData = (data) => {
     repoDetailsLeft.appendChild(repoLangLicenceTime)
     repoStarButton = document.createElement('button')
     repoStarButton.className = "repo-star-button select-color"
-    repoStarButton.innerHTML = 'Star'
+    const starIconText = document.createElement('span')
+    starIconText.className = "star-icon-text"
+    starIconText.innerHTML = '   Star'
+    const starIcon = document.createElement('i')
+    starIcon.classList.add("fa", "fa-star")
+    // starIcon.innerHTML = '  Star'
+    starIcon.appendChild(starIconText)
+    repoStarButton.appendChild(starIcon)
     repoDetailsRight = document.createElement('div')
     repoDetailsRight.className = "repo-details-right"
     repoDetailsRight.appendChild(repoStarButton)
