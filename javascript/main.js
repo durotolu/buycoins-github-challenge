@@ -84,10 +84,31 @@ const handleData = (data) => {
     repoDescription.innerHTML = repository.description
     const repoLangLicenceTime = document.createElement('div');
     repoLangLicenceTime.className = "repo-lang-licence-time"
+
+    const repoColor = document.createElement('span');
+    repoColor.className = "repo-color";
+    repoColor.style.backgroundColor = repository.languages.nodes[0] ? repository.languages.nodes[0].color : null
+    const repoLang = document.createElement('span');
+    repoLang.innerHTML = repository.languages.nodes[0] ? repository.languages.nodes[0].name : null
+
+    const repoLicence = document.createElement('span')
+    repoLicence.className = "repo-licence"
+    repoLicence.innerHTML = repository.licenseInfo.name
+
+    const repoTime = document.createElement('span')
+    repoTime.className = "repo-time"
+    repoTime.innerHTML = repository.updatedAt
+
+    repoLangLicenceTime.appendChild(repoColor)
+    repoLangLicenceTime.appendChild(repoLang)
+    repoLangLicenceTime.appendChild(repoLicence)
+    repoLangLicenceTime.appendChild(repoTime)
+
     repoDetailsLeft = document.createElement('div')
     repoDetailsLeft.className = "repo-details-left"
     repoDetailsLeft.appendChild(repoName)
     repoDetailsLeft.appendChild(repoDescription)
+    repoDetailsLeft.appendChild(repoLangLicenceTime)
     repoStarButton = document.createElement('button')
     repoStarButton.className = "repo-star-button select-color"
     repoStarButton.innerHTML = 'Star'
@@ -115,6 +136,7 @@ const GETData = () => {
     .then(res => res.json())
     .then(res => {
       console.log(res.data.user)
+      // console.log(res.data.user.repositories.nodes[3].languages.nodes[0].name)
       handleData(res.data.user)
     })
     .catch(err => console.log(err.json()))
