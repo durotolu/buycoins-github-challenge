@@ -118,7 +118,6 @@ const handleData = (data) => {
     starIconText.innerHTML = '   Star'
     const starIcon = document.createElement('i')
     starIcon.classList.add("fa", "fa-star")
-    // starIcon.innerHTML = '  Star'
     starIcon.appendChild(starIconText)
     repoStarButton.appendChild(starIcon)
     repoDetailsRight = document.createElement('div')
@@ -144,8 +143,6 @@ const GETData = () => {
   })
     .then(res => res.json())
     .then(res => {
-      console.log(res.data.user)
-      // console.log(res.data.user.repositories.nodes[3].languages.nodes[0].name)
       handleData(res.data.user)
     })
     .catch(err => console.log(err.json()))
